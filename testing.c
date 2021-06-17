@@ -24,8 +24,19 @@ void main() {
 	ssd1306_startscrollright(00,0xFF);
 	delay(5000);
 
+	ssd1306_begin(SSD1306_SWITCHCAPVCC, SSD1306_I2C_ADDRESS_LEFT);
+
 	ssd1306_clearDisplay();
 	ssd1306_fillRect(10,10, 50, 20, WHITE);
 	ssd1306_fillRect(80, 10, 130, 50, WHITE);
+	ssd1306_display();
+	ssd1306_startscrollleft(00,0xFF);
+        delay(5000);
+	
+	ssd1306_begin(SSD1306_SWITCHCAPVCC, SSD1306_I2C_ADDRESS_RIGHT);
+	ssd1306_clearDisplay();
+	ssd1306_display();
+	ssd1306_begin(SSD1306_SWITCHCAPVCC, SSD1306_I2C_ADDRESS_LEFT);
+	ssd1306_clearDisplay();
 	ssd1306_display();
 }
