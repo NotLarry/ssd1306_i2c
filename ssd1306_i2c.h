@@ -34,6 +34,8 @@ All text above, and the splash screen must be included in any redistribution
 // Address for 128x32 is 0x3C
 // Address for 128x64 is 0x3D (default) or 0x3C (if SA0 is grounded)
 
+#define SSD1306_I2C_ADDRESS_RIGHT   	0x3C		// 011110+SA0+RW - 0x3C or 0x3D
+#define SSD1306_I2C_ADDRESS_LEFT   	0x3D	 	// 011110+SA0+RW - 0x3C or 0x3D
 /*=========================================================================
     SSD1306 Displays
     -----------------------------------------------------------------------
